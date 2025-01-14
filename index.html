@@ -10,22 +10,22 @@
     
     <section class="container-principal">
 
-        <section class="tela-inicial tela" >
+        <section class="tela" id="tela-inicial">
             <h2>Jogo da Adivinhação</h2>
 
             <div class="cont-btn-tela-inicial">
-                <button onclick="inicarJogo()">Iniciar Jogo</button>
+            <button class="btn-inicio-jogo">Iniciar Jogo</button>
             </div>
         </section>
-        <section class="tela-inicial tela" >
+        <section class="tela"  id="tela-jogo" style="display: none;">
             <h2>adivinhe o número de 1 a 100</h2>
-            <div class="rodada">Rodada <span class="numero-rodada">x</span> de 10</div>
+            <div class="rodada">Rodada <span id="numero-rodada">x</span> de 10</div>
             <div class="cont-dicas">
-                <div class="dicas">??</div>
+                <div id="dicas">??</div>
             </div>
             <div>
-                <input type="number" name="numero" id="entrada_de_numero">
-                <button onclick="nova_tentativa()">Tentar</button>
+                <input type="number" max="100" min="1" name="numero" id="entrada_de_numero">
+                <button id="btn-tentativa">Tentar</button>
             </div>
             <div class="cont-historico">
                 <div class="cont-historico"></div>
@@ -33,12 +33,12 @@
            
         </section>
 
-        <section class="tela-inicial tela" >
+        <section class="tela" id="tela-score" style="display: none;">
             <h2>Score</h2>
 
             <div class="score">XX</div>
             <div class="cont-btn-score">
-                <button onclick="inicarJogo()">Tentar Novamente</button>
+                <button class="btn-inicio-jogo">Tentar Novamente</button>
                 <button onclick="retornarTelaInicial">Menu Principal</button>
             </div>
         </section>
