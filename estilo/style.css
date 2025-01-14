@@ -1,0 +1,25 @@
+
+/* config geral */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.tela{
+    width: 500px;
+    height: 500px;
+    
+    padding: 20px;
+}
+
+
+.container-principal{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}

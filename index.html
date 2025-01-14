@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    
+    <section class="container-principal">
+
+        <section class="tela-inicial tela" >
+            <h2>Jogo da Adivinhação</h2>
+
+            <div class="cont-btn-tela-inicial">
+                <button onclick="inicarJogo()">Iniciar Jogo</button>
+            </div>
+        </section>
+        <section class="tela-inicial tela" >
+            <h2>adivinhe o número de 1 a 100</h2>
+            <div class="rodada">Rodada <span class="numero-rodada">x</span> de 10</div>
+            <div class="cont-dicas">
+                <div class="dicas">??</div>
+            </div>
+            <div>
+                <input type="number" name="numero" id="entrada_de_numero">
+                <button onclick="nova_tentativa()">Tentar</button>
+            </div>
+            <div class="cont-historico">
+                <div class="cont-historico"></div>
+            </div>
+           
+        </section>
+
+        <section class="tela-inicial tela" >
+            <h2>Score</h2>
+
+            <div class="score">XX</div>
+            <div class="cont-btn-score">
+                <button onclick="inicarJogo()">Tentar Novamente</button>
+                <button onclick="retornarTelaInicial">Menu Principal</button>
+            </div>
+        </section>
+    </section>
+
+
+    <script src="script/script.js"></script>
+</body>
+</html>
