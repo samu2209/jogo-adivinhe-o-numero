@@ -10,7 +10,7 @@
     
     <section class="container-principal">
 
-        <section class="tela" id="tela-inicial">
+        <section class="tela" id="tela-inicial" style="display: flex;">
             <h2>Jogo da Adivinhação</h2>
 
             <div class="cont-btn-tela-inicial">
@@ -23,9 +23,9 @@
             <div class="cont-dicas">
                 <div id="dicas">??</div>
             </div>
-            <div>
+            <div class="entrada-dados">
                 <input type="number" max="100" min="1" name="numero" id="entrada_de_numero">
-                <button id="btn-tentativa">Tentar</button>
+                <button id="btn-tentativa" type="submit">Tentar</button>
             </div>
             <div class="cont-historico">
                 <h3>Acertos</h3>
@@ -40,7 +40,7 @@
             <div class="score" id="score">XX</div>
             <div class="cont-btn-score">
                 <button class="btn-inicio-jogo">Tentar Novamente</button>
-                <button >Menu Principal</button>
+                <button id="btn-volta-menu">Menu Principal</button>
             </div>
         </section>
     </section>

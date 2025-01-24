@@ -28,10 +28,14 @@ class Jogo {
 
         this.telaInicial.style.display = "none" ; 
         this.telaScore.style.display = "none" ; 
-        this.telaJogo.style.display = "block" ; 
+        this.telaJogo.style.display = "flex" ; 
     
         this.rodada = 1; 
         this.numeroDaRodada.innerHTML = this.rodada ;
+        this.historicoNumeros = [] ;
+        this.historicoAcertos.innerHTML = this.historicoNumeros ;
+
+        document.getElementById("entrada_de_numero").value = ""; 
 
         this.gerarNumeroAleatorio();
 
@@ -80,11 +84,18 @@ class Jogo {
     encerrarJogo(){
          
         this.telaInicial.style.display = "none" ; 
-        this.telaScore.style.display = "block" ; 
+        this.telaScore.style.display = "flex" ; 
         this.telaJogo.style.display = "none" ; 
         this.mostrarScore.innerHTML = this.score ;
 
         
+
+    }
+    voltarParaMenu(){
+        this.telaInicial.style.display = "flex" ; 
+        this.telaScore.style.display = "none" ; 
+        this.telaJogo.style.display = "none" ; 
+     
 
     }
 
@@ -94,11 +105,16 @@ class Jogo {
 const jogo  = new Jogo();
 
  
-const BtnInicioJogo = document.querySelectorAll(".btn-inicio-jogo");
-const BtTentativa = document.getElementById("btn-tentativa")
+const btnInicioJogo = document.querySelectorAll(".btn-inicio-jogo");
+const btTentativa = document.getElementById("btn-tentativa")
+const btnVoltaMenu = document.getElementById("btn-volta-menu") ; 
 
-BtTentativa.addEventListener("click", jogo.tentativa.bind(jogo))
-BtnInicioJogo.forEach((item) => {
+btTentativa.addEventListener("click", jogo.tentativa.bind(jogo))
+btnInicioJogo.forEach((item) => {
     item.addEventListener( "click" , jogo.iniciarJogo.bind(jogo))
-})
+}); 
+
+btnVoltaMenu.addEventListener("click" , jogo.voltarParaMenu.bind(jogo))
+
+
 
